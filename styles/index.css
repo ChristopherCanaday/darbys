@@ -1,0 +1,192 @@
+/* latin-ext */
+@font-face {
+  font-family: 'Overlock';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Overlock Regular'), local('Overlock-Regular'), url(https://fonts.gstatic.com/s/overlock/v7/Z9XVDmdMWRiN1_T9Z7TX6OymlLGDzCs.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Overlock';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Overlock Regular'), local('Overlock-Regular'), url(https://fonts.gstatic.com/s/overlock/v7/Z9XVDmdMWRiN1_T9Z7TZ6OymlLGD.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin-ext */
+@font-face {
+  font-family: 'PT Sans Caption';
+  font-style: normal;
+  font-weight: 400;
+  src: local('PT Sans Caption'), local('PTSans-Caption'), url(https://fonts.gstatic.com/s/ptsanscaption/v10/0FlMVP6Hrxmt7-fsUFhlFXNIlpcadA_xYS2ix0YK.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'PT Sans Caption';
+  font-style: normal;
+  font-weight: 400;
+  src: local('PT Sans Caption'), local('PTSans-Caption'), url(https://fonts.gstatic.com/s/ptsanscaption/v10/0FlMVP6Hrxmt7-fsUFhlFXNIlpcaeg_xYS2ixw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* Center Block on Home Page */
+.center {
+  display: block;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 125px;
+  width: 500px;
+  text-align: center;
+  line-height: 115px;
+  font-size: 35px;
+	-webkit-background-clip: text;
+   background-color: rgb(232,149,41);
+}
+
+.center::before, .center::after {
+  content: "";
+  background-color: white;
+  height: 10px;
+  display: block;
+  border-radius: 100px;
+}
+
+.center-words {
+  margin: 0;
+  font-weight: bolder;
+  color: white;
+}
+
+  
+/* Nav bar */
+
+ul {
+  list-style-type: none;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.right{
+  float:right;
+}
+
+.left{
+  float:left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: Overlock;
+}
+
+/* Hover Fade Effect */
+.fadebutton {
+  text-align:center;
+  border-radius:5px;
+}
+
+.fadebutton:hover {
+  background: rgb(211,211,211);
+  color: black;
+  -webkit-transition: all ease 0.7s;
+  -moz-transition: all ease 0.7s;
+  -o-transition: all ease 0.7s;
+  -ms-transition: all ease 0.7s ;
+  transition: all ease 0.5s ;
+}
+
+/* Color for current page */
+.active {
+  background-color: #04357C;
+}
+
+/* Background to body of pages*/
+.body-border {
+      background: rgba(60, 60, 60, 1);
+      border: 1px Solid rgba(60,60,60, 0.4);
+      background-clip: padding-box;
+      margin-left: 10%;
+      margin-right: 10%;
+      border-radius: 45px;
+      padding: 2% 2%;
+    }
+
+p {
+  color: rgb(215,212,212);
+  font-family: Overlock;
+}
+
+h1 {
+  color: white;
+  font-family: PT Sans Caption;
+  font-weight: bold;
+}
+
+h2{
+  color: rgb(215,212,212);
+  font-family: Overlock;
+}
+
+h5 {
+  text-align: center;
+  color: rgb(215,212,212);
+  font-size: 17px;
+}
+
+.picture {
+  max-width: 100%;
+  height: 500px;
+  backface-visibility: hidden;
+  transition: 0.5s ease;
+  opacity: 1;
+  display: block;
+  border-radius: 15px;
+}
+.picture:hover {
+  opacity: 0.5;
+}
+
+/* Popups on Pictures */
+.container {
+  position: relative;
+  width: 50%;
+  display: inline-block;
+  height: 50%;
+}
+
+.container:hover .centered {
+  opacity: 1;
+  transition: 0.5s ease;
+}
+
+.centered {
+  position: absolute;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #04357C;
+  color: white;
+  padding: 15px 15px;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 20px;
+}
